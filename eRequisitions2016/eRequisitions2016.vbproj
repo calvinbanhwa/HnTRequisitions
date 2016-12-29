@@ -101,9 +101,14 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2015.1.225.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Branch\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -130,14 +135,64 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FinanceAuthorization.aspx" />
+    <Content Include="frmCreateRequisition.aspx" />
+    <Content Include="frmFinanceRequisitionsAuthorization.aspx" />
+    <Content Include="frmRequisitionsAuthorization.aspx" />
+    <Content Include="frmTresuaryApproval.aspx" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="welcome.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinanceAuthorization.aspx.designer.vb">
+      <DependentUpon>FinanceAuthorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceAuthorization.aspx.vb">
+      <DependentUpon>FinanceAuthorization.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmCreateRequisition.aspx.designer.vb">
+      <DependentUpon>frmCreateRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateRequisition.aspx.vb">
+      <DependentUpon>frmCreateRequisition.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmFinanceRequisitionsAuthorization.aspx.designer.vb">
+      <DependentUpon>frmFinanceRequisitionsAuthorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinanceRequisitionsAuthorization.aspx.vb">
+      <DependentUpon>frmFinanceRequisitionsAuthorization.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmRequisitionsAuthorization.aspx.designer.vb">
+      <DependentUpon>frmRequisitionsAuthorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRequisitionsAuthorization.aspx.vb">
+      <DependentUpon>frmRequisitionsAuthorization.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmTresuaryApproval.aspx.designer.vb">
+      <DependentUpon>frmTresuaryApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTresuaryApproval.aspx.vb">
+      <DependentUpon>frmTresuaryApproval.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.designer.vb">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.vb">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -158,8 +213,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="welcome.aspx.designer.vb">
+      <DependentUpon>welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.aspx.vb">
+      <DependentUpon>welcome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -171,6 +234,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Main.Master" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
